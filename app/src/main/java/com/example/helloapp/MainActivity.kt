@@ -208,7 +208,7 @@ fun AICoachScreen(
                     .fillMaxWidth()
                     .padding(16.dp)
                     .padding(bottom = 90.dp),
-                horizontalArrangement = Arrangement.spacedBy(12.dp),
+                horizontalArrangement = Arrangement.spacedBy(16.dp),
                 verticalAlignment = Alignment.CenterVertically
             ) {
                 // 语音按钮
@@ -497,6 +497,31 @@ fun ColumnScope.TrainingList(selectedDay: Int) {
                     details = "2组 | 20分钟",
                     icon = "🤸"
                 )
+                TrainingCard(
+                    title = "力量循环训练",
+                    details = "5组 | 8次/组",
+                    icon = "💪"
+                )
+                TrainingCard(
+                    title = "间歇冲刺跑",
+                    details = "6组 | 200米/组",
+                    icon = "⚡"
+                )
+                TrainingCard(
+                    title = "腹肌强化",
+                    details = "4组 | 20次/组",
+                    icon = "🔥"
+                )
+                TrainingCard(
+                    title = "功能性训练",
+                    details = "3组 | 15次/组",
+                    icon = "🎯"
+                )
+                TrainingCard(
+                    title = "恢复拉伸",
+                    details = "1组 | 25分钟",
+                    icon = "🧘‍♂️"
+                )
             }
         }
     }
@@ -635,7 +660,7 @@ fun ActionButtons(onStartTraining: (String) -> Unit) {
             .fillMaxWidth()
             .padding(horizontal = 20.dp)
             .padding(bottom = 35.dp),
-        horizontalArrangement = Arrangement.spacedBy(12.dp)
+        horizontalArrangement = Arrangement.spacedBy(6.dp)
     ) {
         Button(
             onClick = { onStartTraining("自由训练") },
@@ -645,7 +670,8 @@ fun ActionButtons(onStartTraining: (String) -> Unit) {
             colors = ButtonDefaults.buttonColors(
                 containerColor = Color(0xB3FFFFFF)
             ),
-            shape = RoundedCornerShape(18.dp)
+            shape = RoundedCornerShape(18.dp),
+            contentPadding = PaddingValues(horizontal = 2.dp, vertical = 8.dp)
         ) {
             Text(
                 text = "自由训练",
@@ -663,7 +689,8 @@ fun ActionButtons(onStartTraining: (String) -> Unit) {
             colors = ButtonDefaults.buttonColors(
                 containerColor = Color(0xCC6DD5C3)
             ),
-            shape = RoundedCornerShape(18.dp)
+            shape = RoundedCornerShape(18.dp),
+            contentPadding = PaddingValues(horizontal = 2.dp, vertical = 8.dp)
         ) {
             Text(
                 text = "开始训练",
@@ -681,7 +708,8 @@ fun ActionButtons(onStartTraining: (String) -> Unit) {
             colors = ButtonDefaults.buttonColors(
                 containerColor = Color(0xB3FFFFFF)
             ),
-            shape = RoundedCornerShape(18.dp)
+            shape = RoundedCornerShape(18.dp),
+            contentPadding = PaddingValues(horizontal = 2.dp, vertical = 8.dp)
         ) {
             Text(
                 text = "模拟测试",
